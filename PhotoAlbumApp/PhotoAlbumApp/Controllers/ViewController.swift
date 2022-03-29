@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         PHPhotoLibrary.shared().register(self)
         
+        self.configureBarButton()
         self.configureCollectionView()
         self.requestPhotoLibraryAccess(completion: self.handlePermissionResult)
     }
@@ -41,6 +42,16 @@ class ViewController: UIViewController {
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
         layout.minimumInteritemSpacing = spacing
         layout.minimumLineSpacing = spacing
+    }
+    
+    private func configureBarButton() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showModal))
+        
+    }
+    
+    @objc private func showModal() {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "DoodleViewController") else { return }
+        self.present(viewController, animated: true)
     }
     
     private func fetchAssets() {
