@@ -25,6 +25,7 @@
 		E49C138D27F2E7C30035C64E /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C138B27F2E7C30035C64E /* Album.swift */; };
 		E49C138E27F2E7C30035C64E /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C138C27F2E7C30035C64E /* Size.swift */; };
 		E49C139027F2E7DD0035C64E /* MediaContentContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C138F27F2E7DD0035C64E /* MediaContentContainable.swift */; };
+		E49C139227F2EE3F0035C64E /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C139127F2EE3F0035C64E /* Asset.swift */; };
 		E4D1D0E727E9BA2300322B88 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D0E627E9BA2300322B88 /* UIColor+Random.swift */; };
 		E4D1D0F427E9E12300322B88 /* PhotoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D0F327E9E12300322B88 /* PhotoFactory.swift */; };
 		E4D1D0FA27E9E32E00322B88 /* FactoryBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D0F927E9E32E00322B88 /* FactoryBuildable.swift */; };
@@ -59,6 +60,7 @@
 		E49C138B27F2E7C30035C64E /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		E49C138C27F2E7C30035C64E /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		E49C138F27F2E7DD0035C64E /* MediaContentContainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaContentContainable.swift; sourceTree = "<group>"; };
+		E49C139127F2EE3F0035C64E /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		E4D1D0E627E9BA2300322B88 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		E4D1D0F327E9E12300322B88 /* PhotoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFactory.swift; sourceTree = "<group>"; };
 		E4D1D0F927E9E32E00322B88 /* FactoryBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryBuildable.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E49C138F27F2E7DD0035C64E /* MediaContentContainable.swift */,
+				E49C139127F2EE3F0035C64E /* Asset.swift */,
 				E49C138727F2E63D0035C64E /* Photo.swift */,
 				E49C138B27F2E7C30035C64E /* Album.swift */,
 				E49C138C27F2E7C30035C64E /* Size.swift */,
@@ -304,6 +307,7 @@
 				37E101B227E96108009B9E3B /* ViewController.swift in Sources */,
 				E4D1D0F427E9E12300322B88 /* PhotoFactory.swift in Sources */,
 				37E101AE27E96108009B9E3B /* AppDelegate.swift in Sources */,
+				E49C139227F2EE3F0035C64E /* Asset.swift in Sources */,
 				E49C139027F2E7DD0035C64E /* MediaContentContainable.swift in Sources */,
 				37E101B027E96108009B9E3B /* SceneDelegate.swift in Sources */,
 				E49C138D27F2E7C30035C64E /* Album.swift in Sources */,
