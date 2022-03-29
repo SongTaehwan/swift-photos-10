@@ -8,14 +8,17 @@
 import UIKit
 
 class DoodleViewController: UICollectionViewController {
+    // MARK: - Properties
+    private let spacing: CGFloat = 1.2
     private var assets: Assets?
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.loadJSON()
+        self.configureCollectionView()
         self.configureNavigationController()
-//        self.collectionView.backgroundColor = .darkGray
     }
     
     override func viewWillLayoutSubviews() {
@@ -23,14 +26,26 @@ class DoodleViewController: UICollectionViewController {
         
         let width = view.bounds.inset(by: view.safeAreaInsets).width
         let columnCount = (width / 100).rounded(.towardZero)
-        let spacing: CGFloat = 1.2
+        let cellWidth = (width / columnCount) - self.spacing
         
-        guard let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-        let cellWidth = (width / columnCount) - spacing
+        guard let layout = self.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
-        layout.minimumInteritemSpacing = spacing
-        layout.minimumLineSpacing = spacing
+    }
+    
+    // MARK: - Configuration
+    private func configureNavigationController() {
+        let button = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeModal))
+        self.navigationItem.rightBarButtonItem = button
+        self.navigationItem.title = "Doodles"
+    }
+    
+    private func configureCollectionView() {
+        guard let layout = self.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        
+        layout.minimumInteritemSpacing = self.spacing
+        layout.minimumLineSpacing = self.spacing
+        layout.scrollDirection = .vertical
     }
     
     private func loadJSON() {
@@ -42,13 +57,7 @@ class DoodleViewController: UICollectionViewController {
         self.assets = try? decoder.decode(Assets.self, from: data)
     }
     
-    private func configureNavigationController() {
-        let button = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeModal))
-//        self.navigationController?.navigationBar.backgroundColor = .white
-        self.navigationItem.rightBarButtonItem = button
-        self.navigationItem.title = "Doodles"
-    }
-    
+    // MARK: - Handlers
     @objc private func closeModal() {
         self.dismiss(animated: true)
     }

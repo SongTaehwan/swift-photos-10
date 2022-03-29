@@ -51,41 +51,6 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
-        <!--Doodles-->
-        <scene sceneID="gBG-Mu-IwW">
-            <objects>
-                <collectionViewController storyboardIdentifier="DoodleViewController" id="dca-pU-8FN" customClass="DoodleViewController" customModule="PhotoAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HER-Cd-vQ7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hZc-U0-jiK">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="s66-v9-wkd">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u5j-c3-ndy">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="dca-pU-8FN" id="VRj-nK-wA7"/>
-                            <outlet property="delegate" destination="dca-pU-8FN" id="tbl-p7-Tay"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Doodles" id="nKc-yC-7te"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UbC-ro-UXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2766.666666666667" y="116.51785714285714"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="t1J-Tl-gDt">
             <objects>
@@ -104,24 +69,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6A-80-Gat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Pgb-0A-waX">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="slX-Qu-nBP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oQN-EW-7lb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dca-pU-8FN" kind="relationship" relationship="rootViewController" id="R37-jG-cht"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tCu-s1-Te2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1856.521739130435" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>

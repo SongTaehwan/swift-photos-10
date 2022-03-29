@@ -9,11 +9,14 @@ import UIKit
 import Photos
 
 class ViewController: UIViewController {
+    // MARK: - Properties
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private let spacing: CGFloat = 1.2
     private let imageManager = PHCachingImageManager.default()
     private var fetchResult: PHFetchResult<PHAsset>?
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,29 +37,40 @@ class ViewController: UIViewController {
         // Landscape 모드일 때 SafeAreaInset 고려
         let width = view.bounds.inset(by: view.safeAreaInsets).width
         let columnCount = (width / 100).rounded(.towardZero)
-        let spacing: CGFloat = 1.2
+        let cellWidth = (width / columnCount) - self.spacing
         
         guard let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-        let cellWidth = (width / columnCount) - spacing
         
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
-        layout.minimumInteritemSpacing = spacing
-        layout.minimumLineSpacing = spacing
+    }
+    
+    // MARK: - Configuration
+    private func configureCollectionView() {
+        self.collectionView.frame = self.view.bounds
+        self.collectionView.dataSource = self
+        
+        guard let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        layout.minimumInteritemSpacing = self.spacing
+        layout.minimumLineSpacing = self.spacing
     }
     
     private func configureBarButton() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.showModal))
     }
     
+    // MARK: - Handler
     @objc private func showModal() {
         let layout = UICollectionViewFlowLayout()
         let viewController = DoodleViewController(collectionViewLayout: layout)
         let navigationViewController = UINavigationController(rootViewController: viewController)
+        
         self.present(navigationViewController, animated: true)
     }
     
+    // MARK: - Photos
     private func fetchAssets() {
         let allImagesOptions = PHFetchOptions()
+        
         allImagesOptions.sortDescriptors = [.init(key: "creationDate", ascending: false)]
         
         let assets = PHAsset.fetchAssets(with: .image, options: allImagesOptions)
@@ -106,11 +120,6 @@ class ViewController: UIViewController {
         alert.addAction(goToSetting)
         
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    private func configureCollectionView() {
-        self.collectionView.frame = self.view.bounds
-        self.collectionView.dataSource = self
     }
 }
 
