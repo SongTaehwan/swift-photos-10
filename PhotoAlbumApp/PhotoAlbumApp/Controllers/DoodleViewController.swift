@@ -12,7 +12,25 @@ class DoodleViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.loadJSON()
+        self.configureNavigationController()
+//        self.collectionView.backgroundColor = .darkGray
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        let width = view.bounds.inset(by: view.safeAreaInsets).width
+        let columnCount = (width / 100).rounded(.towardZero)
+        let spacing: CGFloat = 1.2
+        
+        guard let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        let cellWidth = (width / columnCount) - spacing
+        
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
+        layout.minimumInteritemSpacing = spacing
+        layout.minimumLineSpacing = spacing
     }
     
     private func loadJSON() {
@@ -24,9 +42,11 @@ class DoodleViewController: UICollectionViewController {
         self.assets = try? decoder.decode(Assets.self, from: data)
     }
     
-    private func configureBarButton() {
-        let button = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(self.closeModal))
+    private func configureNavigationController() {
+        let button = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeModal))
+//        self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationItem.rightBarButtonItem = button
+        self.navigationItem.title = "Doodles"
     }
     
     @objc private func closeModal() {

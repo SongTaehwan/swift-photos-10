@@ -46,12 +46,13 @@ class ViewController: UIViewController {
     
     private func configureBarButton() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.showModal))
-        
     }
     
     @objc private func showModal() {
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "DoodleViewController") else { return }
-        self.present(viewController, animated: true)
+        let layout = UICollectionViewFlowLayout()
+        let viewController = DoodleViewController(collectionViewLayout: layout)
+        let navigationViewController = UINavigationController(rootViewController: viewController)
+        self.present(navigationViewController, animated: true)
     }
     
     private func fetchAssets() {

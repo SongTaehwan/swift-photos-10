@@ -84,7 +84,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UbC-ro-UXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="117"/>
+            <point key="canvasLocation" x="2766.666666666667" y="116.51785714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t1J-Tl-gDt">
@@ -104,6 +104,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6A-80-Gat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pgb-0A-waX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="slX-Qu-nBP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oQN-EW-7lb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dca-pU-8FN" kind="relationship" relationship="rootViewController" id="R37-jG-cht"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCu-s1-Te2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1856.521739130435" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
