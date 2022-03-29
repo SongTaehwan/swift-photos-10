@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     private func configureBarButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showModal))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.showModal))
         
     }
     

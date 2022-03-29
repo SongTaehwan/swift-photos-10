@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
-        <!--Doodle View Controller-->
+        <!--Doodles-->
         <scene sceneID="gBG-Mu-IwW">
             <objects>
                 <collectionViewController storyboardIdentifier="DoodleViewController" id="dca-pU-8FN" customClass="DoodleViewController" customModule="PhotoAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,10 +80,11 @@
                             <outlet property="delegate" destination="dca-pU-8FN" id="tbl-p7-Tay"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Doodles" id="nKc-yC-7te"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UbC-ro-UXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="117"/>
+            <point key="canvasLocation" x="1857" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t1J-Tl-gDt">

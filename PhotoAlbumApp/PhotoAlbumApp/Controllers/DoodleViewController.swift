@@ -8,19 +8,28 @@
 import UIKit
 
 class DoodleViewController: UICollectionViewController {
+    private var assets: Assets?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadJSON()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func loadJSON() {
+        guard let url = Bundle.main.url(forResource: "doodle", withExtension: "json") else { return }
+        guard let data = try? Data.init(contentsOf: url) else { return }
+        
+        let decoder = JSONDecoder()
+        
+        self.assets = try? decoder.decode(Assets.self, from: data)
     }
-    */
-
+    
+    private func configureBarButton() {
+        let button = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(self.closeModal))
+        self.navigationItem.rightBarButtonItem = button
+    }
+    
+    @objc private func closeModal() {
+        self.dismiss(animated: true)
+    }
 }

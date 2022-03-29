@@ -12,3 +12,5 @@ struct Asset: Codable {
     let image: String
     let date: String
 }
+
+typealias Assets = [Asset]
