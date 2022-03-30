@@ -30,6 +30,11 @@
 		E4D1D0F427E9E12300322B88 /* PhotoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D0F327E9E12300322B88 /* PhotoFactory.swift */; };
 		E4D1D0FA27E9E32E00322B88 /* FactoryBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D0F927E9E32E00322B88 /* FactoryBuildable.swift */; };
 		E4D1D0FE27E9EC5600322B88 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D0FD27E9EC5600322B88 /* CGSize+Extensions.swift */; };
+		E4DA077927F3F2B7007BBBE6 /* MediaContentContainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C138F27F2E7DD0035C64E /* MediaContentContainable.swift */; };
+		E4DA077A27F3F2B7007BBBE6 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C139127F2EE3F0035C64E /* Asset.swift */; };
+		E4DA077B27F3F2B7007BBBE6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C138727F2E63D0035C64E /* Photo.swift */; };
+		E4DA077C27F3F2B7007BBBE6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C138B27F2E7C30035C64E /* Album.swift */; };
+		E4DA077D27F3F2B7007BBBE6 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C138C27F2E7C30035C64E /* Size.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DA077927F3F2B7007BBBE6 /* MediaContentContainable.swift in Sources */,
+				E4DA077A27F3F2B7007BBBE6 /* Asset.swift in Sources */,
+				E4DA077B27F3F2B7007BBBE6 /* Photo.swift in Sources */,
+				E4DA077C27F3F2B7007BBBE6 /* Album.swift in Sources */,
+				E4DA077D27F3F2B7007BBBE6 /* Size.swift in Sources */,
 				E49C137927F2D9FE0035C64E /* UIColor+Random.swift in Sources */,
 				E49C137A27F2D9FE0035C64E /* CGSize+Extensions.swift in Sources */,
 				E49C137B27F2D9FE0035C64E /* FactoryBuildable.swift in Sources */,

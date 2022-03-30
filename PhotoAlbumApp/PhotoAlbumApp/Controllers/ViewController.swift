@@ -63,7 +63,6 @@ class ViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         let viewController = DoodleViewController(collectionViewLayout: layout)
         let navigationViewController = UINavigationController(rootViewController: viewController)
-        
         self.present(navigationViewController, animated: true)
     }
     
