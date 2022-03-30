@@ -1,0 +1,27 @@
+name: Swift
+
+on:
+  push:
+    branches:
+      - develop
+      - feature-*
+      - fix-*
+      - refactor-*
+      - test-*
+  pull_request:
+    branches:
+      - develop
+      - feature-*
+      - fix-*
+      - refactor-*
+      - test-*
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Tests
+        run: |
+          xcodebuild test -project $PWD/PhotoAlbumApp/PhotoAlbumApp.xcodeproj -scheme PhotoAlbumApp -destination 'platform=iOS Simulator,name=iPhone 13 Pro,OS=15.2'
